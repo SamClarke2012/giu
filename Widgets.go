@@ -10,7 +10,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/SamClarke2012/imgui-go"
+	"github.com/AllenDang/imgui-go"
 	resty "github.com/go-resty/resty/v2"
 	"github.com/sahilm/fuzzy"
 )

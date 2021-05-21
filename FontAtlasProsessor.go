@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/AllenDang/go-findfont"
-	"github.com/SamClarke2012/imgui-go"
+	"github.com/AllenDang/imgui-go"
 )
 
 var (
@@ -31,6 +31,9 @@ func init() {
 	stringMap = make(map[rune]bool)
 	extraFontMap = make(map[string]*imgui.Font)
 
+	// Pre register numbers
+	tStr("01234567890.")
+
 	// Pre-register fonts
 	os := runtime.GOOS
 	switch os {
@@ -52,6 +55,9 @@ func init() {
 		// Japanese font
 		registerDefaultFont("Meiryo", 15)
 		// TODO add more fonts for different languages.
+	default:
+		registerDefaultFont("/usr/share/fonts/truetype/liberation/LiberationMono-Regular.ttf", 16)
+		registerDefaultFont("Orbitron",16)
 	}
 }
 

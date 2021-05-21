@@ -1,6 +1,6 @@
 package giu
 
-import "github.com/SamClarke2012/imgui-go"
+import "github.com/AllenDang/imgui-go"
 
 type CodeEditorWidget struct {
 	title  string
@@ -8,9 +8,6 @@ type CodeEditorWidget struct {
 }
 
 func CodeEditor(title string) *CodeEditorWidget {
-	// Ensure line number could be rendered
-	tStr("1234567890")
-
 	return &CodeEditorWidget{
 		title:  title,
 		editor: imgui.NewTextEditor(),
